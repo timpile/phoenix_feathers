@@ -42,7 +42,7 @@ defmodule PhoenixFeathers.MixProject do
 
   defp package() do
     [
-      files: ~w(lib .formatter.exs mix.exs README* LICENSE* CHANGELOG* .env_example),
+      files: ~w(lib .formatter.exs mix.exs README* LICENSE* CHANGELOG*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/timpile/phoenix_feathers"}
     ]
