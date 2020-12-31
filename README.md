@@ -1,6 +1,8 @@
-# PhoenixFeathers
+# Phoenix Feathers
 
-**TODO: Add description**
+**CURRENTLY IN DEVELOPMENT**
+
+A component library for Phoenix LiveView.
 
 ## Installation
 
@@ -10,7 +12,7 @@ by adding `phoenix_feathers` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:phoenix_feathers, "~> 0.1.0"}
+    {:phoenix_feathers, "~> 0.1.0-alpha"}
   ]
 end
 ```
