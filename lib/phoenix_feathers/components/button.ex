@@ -1,4 +1,6 @@
 defmodule PhoenixFeathers.Button do
+  use PhoenixFeathers.LiveComponent
+
   @doc """
   Example
 
@@ -6,7 +8,6 @@ defmodule PhoenixFeathers.Button do
   <%= live_component @socket, PhoenixFeathers.Button, display_text: "Click me" %>
   ```
   """
-  use PhoenixFeathers.LiveComponent
 
   def render(%{click_event: click_event} = assigns) do
     ~L"""

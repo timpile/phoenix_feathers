@@ -1,4 +1,7 @@
 defmodule PhoenixFeathers.Card do
+  use PhoenixFeathers.LiveComponent
+  use Phoenix.HTML
+
   @doc """
   Example
 
@@ -8,9 +11,6 @@ defmodule PhoenixFeathers.Card do
   <% end %>
   ```
   """
-
-  use PhoenixFeathers.LiveComponent
-  use Phoenix.HTML
 
   def render(%{inner_block: inner_block, click_event: click_event} = assigns) do
     ~L"""
