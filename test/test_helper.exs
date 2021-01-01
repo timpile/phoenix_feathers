@@ -17,3 +17,17 @@ Application.put_env(:phoenix_feathers, Endpoint,
 )
 
 Endpoint.start_link()
+
+defmodule PhoenixFeathers.LiveViewTest do
+  defmacro __using__(_opts) do
+    quote do
+      import Phoenix.LiveViewTest
+
+      @endpoint Endpoint
+
+      setup _tags do
+        {:ok, conn: Phoenix.ConnTest.build_conn()}
+      end
+    end
+  end
+end

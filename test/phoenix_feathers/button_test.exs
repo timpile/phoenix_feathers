@@ -13,7 +13,7 @@ defmodule PhoenixFeathers.ButtonTest do
       )
 
     assert html =~ """
-             <button>
+             <button class="phx_feathers_button">
                Click me
              </button>
            """
@@ -29,6 +29,7 @@ defmodule PhoenixFeathers.ButtonTest do
 
     assert html =~ """
              <button
+               class="phx_feathers_button"
                phx-click="button_clicked"
              >
                Click me

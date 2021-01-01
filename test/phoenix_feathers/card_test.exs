@@ -1,15 +1,8 @@
 defmodule PhoenixFeathers.CardTest do
   use ExUnit.Case
+  use PhoenixFeathers.LiveViewTest
 
-  import Phoenix.LiveViewTest
-
-  @endpoint Endpoint
-
-  setup _tags do
-    {:ok, conn: Phoenix.ConnTest.build_conn()}
-  end
-
-  defmodule TestLiveView do
+  defmodule MockLiveView do
     use Phoenix.LiveView
 
     def render(assigns) do
@@ -22,7 +15,7 @@ defmodule PhoenixFeathers.CardTest do
   end
 
   test "render a basic card component", %{conn: conn} do
-    {:ok, _view, html} = live_isolated(conn, TestLiveView)
+    {:ok, _view, html} = live_isolated(conn, MockLiveView)
 
     assert html =~ ~s|<div>Inner block</div>|
   end

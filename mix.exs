@@ -4,7 +4,7 @@ defmodule PhoenixFeathers.MixProject do
   def project do
     [
       app: :phoenix_feathers,
-      version: "0.1.0-alpha",
+      version: "0.2.0-alpha",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       description: description(),
