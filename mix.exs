@@ -4,7 +4,7 @@ defmodule PhoenixFeathers.MixProject do
   def project do
     [
       app: :phoenix_feathers,
-      version: "0.2.0-alpha",
+      version: "0.2.1-alpha",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -42,7 +42,7 @@ defmodule PhoenixFeathers.MixProject do
 
   defp package() do
     [
-      files: ~w(lib .formatter.exs mix.exs README* LICENSE* CHANGELOG*),
+      files: ~w(assets lib .formatter.exs mix.exs README* LICENSE* CHANGELOG*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/timpile/phoenix_feathers"}
     ]

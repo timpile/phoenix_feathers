@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.2.1-alpha]
+### Fixed
+* Include `assets` directory
+
 ## [0.2.0-alpha]
 ### Added
 * Basic side bar component
