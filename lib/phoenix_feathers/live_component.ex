@@ -3,6 +3,7 @@ defmodule PhoenixFeathers.LiveComponent do
     quote do
       use Phoenix.LiveComponent
       use Phoenix.HTML
+      import PhoenixFeathers.Icon
     end
   end
 end

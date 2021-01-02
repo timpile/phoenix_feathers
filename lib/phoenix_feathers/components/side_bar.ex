@@ -1,6 +1,8 @@
 defmodule PhoenixFeathers.SideBar do
   use PhoenixFeathers.LiveComponent
 
+  alias PhoenixFeathers.Icon
+
   @doc """
   Example
 
@@ -23,8 +25,8 @@ defmodule PhoenixFeathers.SideBar do
       PhoenixFeathers.SideBar,
       id: "phoenix_feathers_side_bar",
       is_open: false,
-      open_icon_path: "/path/to/open-icon.svg",
-      close_icon_path: "/path/to/close-icon.svg"
+      open_icon: %PhoenixFeathers.Icon{name: :menu, color: "#fff"},
+      close_icon: %PhoenixFeathers.Icon{name: :cheveron_left, color: "#fff"}
     do %>
 
     <div>
@@ -35,7 +37,7 @@ defmodule PhoenixFeathers.SideBar do
   ```
   """
 
-  def render(%{open_icon_path: open_icon, close_icon_path: close_icon} = assigns) do
+  def render(%{open_icon: open_icon, close_icon: close_icon} = assigns) do
     ~L"""
       <div class="phx_feathers_side_bar" data-is-open="<%= @is_open %>">
         <div class="top">
@@ -45,7 +47,7 @@ defmodule PhoenixFeathers.SideBar do
             phx-target="<%= @myself %>"
             class="toggle_icon"
           >
-            <img src='<%= toggle_icon(@is_open, open_icon, close_icon) %>'>
+            <%= toggle_icon(assigns, @is_open, open_icon, close_icon) %>
           </a>
         </div>
         <div class="side_bar_content">
@@ -65,7 +67,7 @@ defmodule PhoenixFeathers.SideBar do
             phx-target="<%= @myself %>"
             class="toggle_icon"
           >
-            <%= toggle_icon(@is_open) %>
+            <%= toggle_icon(assigns, @is_open) %>
           </a>
         </div>
         <div class="side_bar_content">
@@ -87,8 +89,11 @@ defmodule PhoenixFeathers.SideBar do
     {:noreply, socket |> assign(is_open: !is_open)}
   end
 
-  defp toggle_icon(true), do: "X"
-  defp toggle_icon(false), do: ">"
-  defp toggle_icon(true, _open_icon, close_icon), do: close_icon
-  defp toggle_icon(false, open_icon, _close_icon), do: open_icon
+  defp toggle_icon(assigns, true), do: svg(assigns, default_icon(:close))
+  defp toggle_icon(assigns, false), do: svg(assigns, default_icon(:open))
+  defp toggle_icon(assigns, true, _open_icon, close_icon), do: svg(assigns, close_icon)
+  defp toggle_icon(assigns, false, open_icon, _close_icon), do: svg(assigns, open_icon)
+
+  defp default_icon(:close), do: %Icon{name: :cheveron_left, color: "#fff"}
+  defp default_icon(:open), do: %Icon{name: :cheveron_right, color: "#fff"}
 end
