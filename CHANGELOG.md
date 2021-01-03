@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.1-alpha]
+### Fixed
+* Top nav z-index
 ## [1.0.0-alpha]
 ### Added
 * Add mobile responsiveness to navigation

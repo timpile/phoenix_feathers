@@ -144,6 +144,8 @@ nav.phx_feathers_top_nav {
 
   @include lte($mobile) {
     > .brand {
+      position: relative;
+      z-index: 1000;
       > a {
         > img {
           max-width: 36px;

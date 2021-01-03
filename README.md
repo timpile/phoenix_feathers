@@ -12,7 +12,7 @@ by adding `phoenix_feathers` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:phoenix_feathers, "~> 1.0.0-alpha"}
+    {:phoenix_feathers, "~> 1.0.1-alpha"}
   ]
 end
 ```
