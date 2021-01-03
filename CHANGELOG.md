@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha]
+### Added
+* Add mobile responsiveness to navigation
+* Make top nav component stateful
+  * NOTE: This is not backwards compatible because the component now requires an `id`
 ## [0.3.0-alpha]
 ### Added
 * Icons
