@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.2-alpha]
+### Fixed
+* CSS for mobile responsive nav
+
+### Added
+* Docs for `PhoenixFeathers.Icon`
+
 ## [1.0.1-alpha]
 ### Fixed
 * Top nav z-index

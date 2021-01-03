@@ -1,8 +1,20 @@
 defmodule PhoenixFeathers.Icon do
   import Phoenix.LiveView.Helpers
 
+  @doc """
+  Example
+
+  ```
+  menu_icon = PhoenixFeathers.Icon%{name: menu, color: "fff"}
+
+  PhoenixFeathers.Icon.render(menu_icon)
+  PhoenixFeathers.Icon.svg(menu_icon)
+  ```
+  """
+
   defstruct [:name, :color]
 
+  @spec render(any, %PhoenixFeathers.Icon{}) :: Phoenix.LiveView.Rendered.t()
   def render(assigns, %PhoenixFeathers.Icon{} = icon) do
     ~L"""
     <span class="phx_feathers_icon">
@@ -11,6 +23,7 @@ defmodule PhoenixFeathers.Icon do
     """
   end
 
+  @spec svg(any, %PhoenixFeathers.Icon{}) :: Phoenix.LiveView.Rendered.t()
   def svg(assigns, %PhoenixFeathers.Icon{name: :cheveron_left, color: color}) do
     ~L"""
     <svg viewBox="0 0 20 20"><path fill="<%= color %>" d="M7.05 9.293L6.343 10 12 15.657l1.414-1.414L9.172 10l4.242-4.243L12 4.343z"/></svg>
