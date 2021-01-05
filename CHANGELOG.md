@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.1.0-alpha]
+### Added
+* Basic tool tip component
+* Tests for tool tip and top nav
+* Improved documentation
+
 ## [1.0.2-alpha]
 ### Fixed
 * CSS for mobile responsive nav
